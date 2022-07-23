@@ -1,5 +1,2 @@
 clean_folder
-<<<<<<< HEAD
-=======
 dist
->>>>>>> d96a032 (Initial commit)
