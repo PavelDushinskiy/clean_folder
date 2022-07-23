@@ -1,16 +1,30 @@
 """Procedure for sorting files in directory
+<<<<<<< HEAD
+=======
+
+>>>>>>> d96a032 (Initial commit)
     All files and folders are renamed using the normalize function;
     File extensions do not change after renaming;
     Empty folders are deleted;
     The unpacked contents of the archive are transferred to the archives folder
     in a subfolder named the same as the archive;
     Files whose extensions are unknown remain unchanged.
+<<<<<<< HEAD
 """
 
 import sys
 import os
 import re
 import shutil
+=======
+
+"""
+
+import os
+import re
+import shutil
+import sys
+>>>>>>> d96a032 (Initial commit)
 
 CYRILLIC_SYMBOLS = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюяєіїґ'
 TRANSLATION = ("a", "b", "v", "g", "d", "e", "e", "j", "z", "i", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u",
@@ -72,8 +86,13 @@ def sort_files(folder_path):
     ext_list = list(extensions.items())
 
     for file_path in file_paths:
+<<<<<<< HEAD
         extension = file_path.split('.')[-1]
         file_name = normalize(file_path.split('\\')[-1])
+=======
+        extension = str(file_path.split('.')[-1])
+        file_name = normalize(str(file_path.split('\\')[-1]))
+>>>>>>> d96a032 (Initial commit)
 
         for dict_key_int in range(len(ext_list)):
             if extension in ext_list[dict_key_int][1]:
@@ -108,11 +127,18 @@ def unpack_file(folder_path):
         os.remove(f'{folder_path}\\{archive}')
 
 
+<<<<<<< HEAD
 def main():
+=======
+if __name__ == "__main__":
+>>>>>>> d96a032 (Initial commit)
     create_folders_from_list(root_folder, extensions)
     sort_files(root_folder)
     remove_empty_folders(root_folder)
     unpack_file(f'{root_folder}\\archives')
+<<<<<<< HEAD
 
 if __name__ == "__main__":
     main()
+=======
+>>>>>>> d96a032 (Initial commit)
