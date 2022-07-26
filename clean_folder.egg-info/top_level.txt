@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 clean_folder
 dist
+=======
+build
+clean_folder
+>>>>>>> 1f2b608 (Fixed troubles)
